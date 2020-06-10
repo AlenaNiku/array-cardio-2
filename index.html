@@ -27,13 +27,13 @@
     // Some and Every Checks - return TRUE OR FALSE
 
     // Array.prototype.some() // is at least one person 19 or older?
-    // const isAdult = people.some(function() {
-    //   // get the correct current date
-    //   const currentYear = (new Date()).getFullYear()
-    //   if(currentYear - person.year >= 19) {
-    //     return true
-    //   }
-    // })
+    const isAdult = people.some(function() {
+      // get the correct current date
+      const currentYear = (new Date()).getFullYear()
+      if(currentYear - person.year >= 19) {
+        return true
+      }
+    })
 
     // REWRITTEN WITH ARROW FUNCTION
     const isAdult = people.some(person => {
@@ -54,6 +54,9 @@
         return true
       }
     })
+
+    // REFACTOR WITH ARROW FUNCTION, returns true or false implicitly
+    const comment = comments.find(comment => { comment.id === 823423 })
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
